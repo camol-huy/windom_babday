@@ -1,0 +1,300 @@
+{% extends 'base_fr.html.twig' %}
+
+{% block title %}BABDay 2022 - Programme{% endblock %}
+
+{% block body %}
+<body class ="bgImage"style="background-image:url({{ asset('image/lines2.png') }});">
+
+<div class="container pt-50">
+
+    <!-- start of table principal web-->
+    <table class="table-fill tombola-web">
+        <thead>
+        <tr>
+            <th>Horaire</th>
+            <th> Description</th>
+            <th>
+                 <div class="row pt-10">
+                    <!-- carré bleu clair - AIR -->
+                     <div class="col-1">
+                        <div class="test-legende "></div>
+                    </div>
+                    <div class="col-5">
+                        <p>Activités en l'air</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- carré bleu foncé - GROUND -->
+                    <div class="col-1">
+                        <div class="test-legende2 "></div>
+                    </div>
+                    <div class="col-5">
+                        <p>Activités au sol</p>
+                    </div>
+                </div>
+            </th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr class="Land">
+            <td class="text-left Land">ALL DAY LONG</td>
+            <td colspan=2 class="text-left Land ">Combat survival</td>
+        </tr>
+        <tr class="Air">
+            <td class="text-left Air">10h00 – 10h10</td>
+            <td colspan=2 class="text-left Air">Royal Belgian Air Cadets Tow ship demo</td>
+        </tr>
+        <tr class="Air">
+            <td class="text-left Air">10h15 – 10h35</td>
+            <td colspan=2 class="text-left Air">Red Devils display</td>
+        </tr>
+        <tr class="Land">
+            <td class="Land">10h45 – 11h10</td>
+            <td colspan=2 class="text-left Land">Close Range Techniques (Self Defense) – Des Techniques qui sont utilisées en réaction à une attaque personnelle à courte distance.</td>
+        </tr>
+        <tr class="Air">
+            <td class="text-left Air">11h15 – 11h25</td>
+            <td colspan=2 class="text-left Air">Razzle Blades display</td>
+        </tr>
+        <tr class="Air">
+            <td class="text-left Air">11h40 – 11h55</td>
+            <td colspan=2 class="text-left Air">Fly pasts F16 & Spitfire</td>
+        </tr>
+        <tr class="Air">
+            <td class="text-left Air">12h10 – 12h50</td>
+            <td colspan=2 class="text-left Air">Rotary Wing Role Demo</td>
+        </tr>
+        <tr class="Land">
+            <td class="text-left Land">13h05 – 13h30</td>
+            <td colspan=2 class="text-left Land">Recherche et capture d’un intrus</td>
+        </tr>
+        <tr class="Air">
+            <td class="text-left Air">13h30 – 13h45</td>
+            <td colspan=2 class="text-left Air">Fly past A400 & MRTT</td>
+        </tr>
+        <tr class="Air">
+            <td class="text-left Air">13h55 – 14h15</td>
+            <td colspan=2 class="text-left Air">Red Devils display</td>
+        </tr>
+        <tr class="Land">
+            <td class="text-left Land">14h25 – 14h50</td>
+            <td colspan=2 class="text-left Land">La détection et la désinfection d’agents biologiques comme l’Anthrax</td>
+        </tr>
+        <tr class="Air">
+            <td class="text-left Air">14h55 – 15h05</td>
+            <td colspan=2 class="text-left Air">Razzle Blades display</td>
+        </tr>
+        <tr class="Land">
+            <td class="text-left Land">15h10 – 15h30</td>
+            <td colspan=2 class="text-left Land">Military Working Dog – Patrol dog - Comment travaillons-nous avec des chiens de patrouille? Que sont-ils capables de faire?</td>
+        </tr>
+        <tr class="Air">
+            <td class="text-left Air">15h55 – 16h30</td>
+            <td colspan=2 class="text-left Air">Rotary Wing Role Demo</td>
+        </tr>
+        <tr class="Air">
+            <td class="text-left Air">16h45 - 16h55</td>
+            <td colspan=2 class="text-left Air">Royal Belgian Air Cadets Tow ship demo</td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- end of table principal web -->
+
+    <!-- start of table principal mobile -->
+    <div class="text-center"><a href="{{ asset('BABDAY.pdf') }}"><h4>Télécharger le programme en PDF</h4></a></div>
+    <div class="row">
+        <div class="col-3 offset-3 test-legende"></div>
+        <div class="col-6">Activités en l'air</div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-3 offset-3 test-legende2"></div>
+        <div class="col-6">Activités au sol</div>
+    </div>
+    <div class="tombola-mobile mb-2">
+        <table class="table-fill">
+            <thead>
+            <tr>
+                <th class="text-center" style="width: 125px">Horaire</th>
+                <th class="text-center" style="width: 250px"> Description</th>
+
+
+            </tr>
+            </thead>
+            <tbody class="table-hover">
+            <tr class="Land">
+                <td class="text-center Land">ALL DAY LONG</td>
+                <td colspan=2 class="text-center Land ">Combat survival</td>
+            </tr>
+            <tr class="Air">
+                <td class="text-center Air">10h00 <br>–<br> 10h10</td>
+                <td colspan=2 class="text-center Air">Royal Belgian Air Cadets Tow ship demo</td>
+            </tr>
+            <tr class="Air">
+                <td class="text-center Air">10h15 <br>–<br> 10h35</td>
+                <td colspan=2 class="text-center Air">Red Devils display</td>
+            </tr>
+            <tr class="Land">
+                <td class="text-center Land">10h45 <br>–<br> 11h10</td>
+                <td colspan=2 class="text-center Land">Close Range Techniques (Self Defense) – Des Techniques qui sont utilisées en réaction à une attaque personnelle à courte distance.</td>
+            </tr>
+            <tr class="Air">
+                <td class="text-center Air">11h15 <br>–<br> 11h25</td>
+                <td colspan=2 class="text-center Air">Razzle Blades display</td>
+            </tr>
+            <tr class="Air">
+                <td class="text-center Air">11h40 <br>–<br> 11h55</td>
+                <td colspan=2 class="text-center Air">Fly pasts F16 & Spitfire</td>
+            </tr>
+            <tr class="Air">
+                <td class="text-center Air">12h10 <br>–<br> 12h50</td>
+                <td colspan=2 class="text-center Air">Rotary Wing Role Demo</td>
+            </tr>
+            <tr class="Land">
+                <td class="text-center Land">13h05 <br>–<br> 13h30</td>
+                <td colspan=2 class="text-center Land">Recherche et capture d’un intrus</td>
+            </tr>
+            <tr class="Air">
+                <td class="text-center Air">13h30 <br>–<br> 13h45</td>
+                <td colspan=2 class="text-center Air">Fly past A400 & MRTT</td>
+            </tr>
+            <tr class="Air">
+                <td class="text-center Air">13h55 <br>–<br> 14h15</td>
+                <td colspan=2 class="text-center Air">Red Devils display</td>
+            </tr>
+            <tr class="Land">
+                <td class="text-center Land">14h25<br>–<br> 14h50</td>
+                <td colspan=2 class="text-center Land">La détection et la désinfection d’agents biologiques comme l’Anthrax</td>
+            </tr>
+            <tr class="Air">
+                <td class="text-center Air">14h55 <br>–<br> 15h05</td>
+                <td colspan=2 class="text-center Air">Razzle Blades display</td>
+            </tr>
+            <tr class="Land">
+                <td class="text-center Land">15h10 <br>–<br> 15h30</td>
+                <td colspan=2 class="text-center Land">Military Working Dog – Patrol dog - Comment travaillons-nous avec des chiens de patrouille? Que sont-ils capables de faire?</td>
+            </tr>
+            <tr class="Air">
+                <td class="text-center Air">15h55 <br>–<br> 16h30</td>
+                <td colspan=2 class="text-center Air">Rotary Wing Role Demo</td>
+            </tr>
+            <tr class="Air">
+                <td class="text-center Air">16h45 <br>-<br> 16h55</td>
+                <td colspan=2 class="text-center Air">Royal Belgian Air Cadets Tow ship demo</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end of table principal mobile -->
+
+    <!-- start bapteme web-->
+    <table class="table-fill tombola-web">
+        <thead>
+        <tr>
+            <th class="">Air Rides A109&NH90</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th class="text-left">Heure</th>
+            <th class="text-left">Heure du tirage</th>
+            <th class="text-left">RV Air Rides Tent</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr class="Air">
+            <td class="text-left Air">13h05 – 13h30</td>
+            <td class="text-left Air">11h30</td>
+            <td class="text-left Air">12h15</td>
+        </tr>
+        <tr class="Air">
+            <td class="text-left Air">15h10 – 15h35</td>
+            <td class="text-left Air">13h30</td>
+            <td class="text-left Air">14h30</td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- end bapteme web -->
+
+    <!-- start bapteme mobile -->
+    <div class="mt-5 tombola-mobile">
+        <table class=" table-fill">
+            <thead>
+            <tr>
+                <th COLSPAN="3" class="text-center">Air Rides A109&NH90</th>
+            </tr>
+            <tr>
+                <th class="text-center" >Heure</th>
+                <th class="text-center" >Heure <br>du <br> tirage</th>
+                <th class="text-center" >RV Air Rides Tent</th>
+            </tr>
+            </thead>
+            <tbody class="table-hover">
+            <tr class="Air">
+                <td class="text-center Air">13h05 <br> - <br> 13h30</td>
+                <td class="text-center Air">11h30</td>
+                <td class="text-center Air">12h15</td>
+            </tr>
+            <tr class="Air">
+                <td class="text-center Air">15h10 <br>–<br> 15h35</td>
+                <td class="text-center Air">13h30</td>
+                <td class="text-center Air">14h30</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end bapteme mobile -->
+
+    <!-- start tombola web-->
+    <table class="table-fill tombola-web ">
+        <thead>
+        <tr>
+            <th class="">Tombola A400M</th>
+
+        </tr>
+        <tr>
+            <th class="text-left">Heure du tirage</th>
+        </tr>
+        </thead>
+        <tbody class="table-hover">
+        <tr class="Air">
+            <td class="text-left Air">11h30</td>
+        </tr>
+        <tr class="Air">
+            <td class="text-left Air">13h30</td>
+        </tr>
+        <tr class="Air">
+            <td class="text-left Air">15h30</td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- end tombola web -->
+
+    <!-- start tombola mobile -->
+    <div class="mt-4 mb-4 tombola-mobile">
+            <table class="table-fill ">
+            <thead>
+            <tr>
+                <th style="width: 375px" class="text-center">Tombola A400M</th>
+            </tr>
+            <tr>
+                <th class="text-center">Heure du tirage</th>
+            </tr>
+            </thead>
+            <tbody class="table-hover">
+            <tr class="Air">
+                <td class="text-center Air">11h30</td>
+            </tr>
+            <tr class="Air">
+                <td class="text-center Air">13h30</td>
+            </tr>
+            <tr class="Air" >
+                <td class="text-center Air">15h30</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end tombola mobile -->
+</div>
+</body>
+    {%  include 'footer/footer_fr.html.twig' %}
+{% endblock %}

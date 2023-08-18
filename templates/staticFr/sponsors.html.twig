@@ -1,0 +1,69 @@
+{% extends 'base_fr.html.twig' %}
+
+{% block title %}BABDay 2022 - Sponsors{% endblock %}
+
+{% block body %}
+<body class ="bgImage"style="background-image:url({{ asset('image/lines2.png') }});">
+<div class="sponsor container pt-50">
+    <!-- logo 5000 -->
+    <div class="pb-5">
+        <img width="80%" height="auto" class="mx-auto d-block" src="{{ asset('image/haachtbrewery_5000.jpg') }}" alt="">
+    </div>
+    <!-- logo top 1 -->
+    <div class="row" style="margin-bottom: 20px">
+        <div class="col-6 fond-sponsor align_img" style="padding: 10px">
+            <img width="100%" height="auto" src="{{ asset('image/sabca.png') }}" alt="">
+        </div>
+        <div class="col-6 align_img">
+            <img width="100%" height="auto" class="align_img" src="{{ asset('image/SnapOn_1500.png') }}" alt="">
+        </div>
+    </div>
+    <!-- logo top 2 -->
+    <div class="row" style="margin-bottom: 20px">
+        <div class="col-6 fond-sponsor align_img" style="padding: 10px">
+            <img width="80%" height="auto" src="{{ asset('image/logo_iai_1500.png') }}" alt="">
+        </div>
+        <div class="col-6 align_img">
+            <img width="100%" height="auto" class="align_img" src="{{ asset('image/pilatus_1000.png') }}" alt="">
+        </div>
+    </div>
+    <!-- logo seconde zone -->
+    <div class="row mt-3">
+        <div class="col-4 align_img">
+            <img width="100%" height="auto" src="{{ asset('image/intersoft_electronics_500.png') }}" alt="">
+        </div>
+        <div class="col-4 align_img">
+            <img width="100%" height="auto" src="{{ asset('image/brabant_wallon_500.png') }}" alt="">
+        </div>
+        <div class="col-4 align_img">
+            <img width="100%" height="auto" src="{{ asset('image/cebeo_500.png') }}" alt="">
+        </div>
+    </div>
+    <!-- logo 500 et 250 -->
+    <div class="row mt-3 mb-5">
+        <div class="col-4">
+            <img width="100%" height="auto" src="{{ asset('image/Loma_air_500.jpg') }}" alt="">
+        </div>
+        <div class="col-3 offset-1 align_img">
+            <img width="100%" height="auto" src="{{ asset('image/Batteryshop_250.jpg') }}" alt="">
+        </div>
+        <div class="col-3 offset-1 align_img">
+            <img width="50%" height="auto" src="{{ asset('image/sini.jpg') }}" alt="">
+        </div>
+    </div>
+    <!-- logo 250 -->
+    <div class="row mt-3 mb-5">
+        <div class="col-3 align_img">
+            <img width="100%" height="auto" src="{{ asset('image/radio_passion_250.jpg') }}" alt="">
+        </div>
+        <div class="col-4 fond-sponsor offset-1 text-center">
+            <img width="50%" height="auto" src="{{ asset('image/10_250.png') }}" alt="">
+        </div>
+        <div class="col-3 fond-sponsor offset-1 align_img">
+            <img width="100%" height="auto" src="{{ asset('image/boch_250.png') }}" alt="">
+        </div>
+    </div>
+</div>
+</body>
+    {%  include 'footer/footer_fr.html.twig' %}
+{% endblock %}

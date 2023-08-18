@@ -1,0 +1,41 @@
+{% extends 'base_nl.html.twig' %}
+
+{% block title %}BABDay 2022{% endblock %}
+
+{% block body %}
+    <body>
+    <div class="vh-80 bgImage" style="background-image:url({{ asset('image/heli.png') }})">
+        <div class="noir-opa h-100">
+            <div class="container">
+
+                <div class="d-flex h-cal justify-content-center align-items-center">
+                    <div class="col-7 text-center pt-50">
+                        <h1 class="text-white">BABDAY 2022</h1>
+                        <p class="text-yellow pt-30 txt-head">06 April 2022</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="pourInfo text-center link-wrap2">
+        <a href="#info" class="text-white fw-700 fs-14"> meer informatie<br></a>
+    </div>
+    <section id="info">
+        <div class="container info">
+            <p>Op 06 april organiseert de luchtmachtbasis van Beauvechain de Beauvechain Air Base Day 2022, of kortweg de BAB Day 22.</p>
+
+            <p>Het doel van dit evenement is om de verschillende eenheden van onze basis en de toestellen van onze Belgische Luchtmacht, met nadruk op de toestellen van onze vliegbasis (de A109 en NH90 helikopters en de SF260 Marchetti vliegtuigen), uitgebreid voor te stellen.  </p>
+
+            <p>Bovendien zullen verscheidene burgerlijke entiteiten die een onderlinge band hebben met de basis eveneens vertegenwoordigd worden. </p>
+
+            <p>Van 10u00 tot 17u00 zal het publiek doorlopend de mogelijkheid hebben om verschillende standen te bezoeken waar we onze capaciteiten tentoonstellen. Daarnaast zal er een statisch display zijn van verschillende toestellen, en zullen doorheen de dag ook regelmatig vliegdemonstraties plaatsvinden.</p>
+
+            <p>Ons doelpubliek is, in volgorde: jongeren die geïnteresseerd zijn in luchtvaart en/of in een loopbaan bij Defensie, geïnteresseerden in de vliegwereld en niet in het minst de omliggende bevolking.  We wensen nu eenmaal de band tussen Defensie en de Natie te versterken.  Een deel van de opbrengsten van dit evenement gaat naar de goede doelen die ondersteund worden door de eenheden van onze vliegbasis.</p>
+
+        </div>
+        <img class="imgIndex pb-50" src={{ asset('image/logojaune.png') }} alt="" />
+    </section>
+    </body>
+    {%  include 'footer/footer_nl.html.twig' %}
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration of babday website{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="text-center text-white"><h2>List of all Activity</h2></div>
+        <table class="table text-white">
+            <thead>
+            <tr>
+                <th class="text-center">Name</th>
+                <th class="text-center">Description</th>
+                <th class="text-center" style="white-space: nowrap">french ?</th>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <th class="text-center">delete</th>
+                    <th class="text-center">edit</th>
+                {% endif %}
+            </tr>
+            </thead>
+            <tbody class="text-white">
+            {% for activity in activities%}
+                <tr id="temp">
+                    <td>{{ activity.name }} </td>
+                    <td>{{ activity.description }}</td>
+                    <td class="text-center" >{% if activity.fr == 1 %} yes {% else %} no {% endif %} </td>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <td class="text-center icofont-2x"><a style="color: red; text-decoration: none" href="{{ path('deleteActivity',{id:activity.id}) }}"><i class="icofont-ui-delete"></i></a></td>
+                        <td class="text-center icofont-2x"><a style="color: green; text-decoration: none" href="{{ path('updateActivity',{id:activity.id}) }}"><i class="icofont-edit-alt"></i></a></td>
+                    {%  endif %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,259 @@
+body
+{
+    background-color: rgb(23,37,63);
+    color:white;
+    overflow-x: hidden;
+}
+.logoHome
+{
+    height: 50px;
+    margin-top: -20px;
+}
+.logofoot
+{
+    height: 30px;
+    margin-top: 5px;
+}
+.imgtitle
+{
+ width: 30%;
+ margin-left: 35%;
+}
+.imgIndex
+{
+ width: 25%;
+ margin-left: 37.5%;
+ margin-top: 30px;
+}
+.nav
+{
+    align-items: center;
+}
+.navbar
+{
+    padding-right: 32px;
+    width: 100%;
+}
+.nav-foot
+{
+    max-width: 90%;
+}
+
+.menu-link
+{
+    color:rgb(243, 222, 34);
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+}
+.active
+{
+    color: rgb(96, 175, 189) !important;
+}
+.menu-link:hover
+{
+    color:rgb(197, 197, 197);
+    
+}
+ul
+{
+    list-style-type: none;
+}
+a
+{
+   text-decoration: none;
+   color: white;
+   margin: 20px;
+   
+}
+
+.vh-20
+{
+    height: 20vh!important;
+}
+.vh-80 {
+    height: 80vh!important;
+}
+.vh-100 {
+    height: 100vh!important;
+}
+.pt-50
+{
+    padding-top: 50px;
+}
+.pt-lang
+{
+    padding-top: 220px;
+}
+.pb-50
+{
+    padding-bottom: 50px;
+}
+.bgImage {
+    background-size: cover;
+    min-height: 50px;
+}
+.bgImageLines {
+    min-width: 110vh;
+    background-position: 0% !important;
+}
+.bgImage, .bgImageContain {
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.noir-opa {
+    background-color: rgba(0,0,0,.5);
+}
+.h-100 {
+    height: 100%!important;
+}
+
+.h-cal {
+    height: calc(50%);
+} 
+.align-items-center {
+    align-items: center!important;
+}
+.justify-content-center {
+    justify-content: center!important;
+}
+.d-flex {
+    display: flex!important;
+}
+h1, h2 {
+    font-weight: 700;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+}
+.txt-head {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 17px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+}
+.text-yellow
+{
+    color:rgb(243, 222, 34);
+}
+.fs-14 {
+    font-size: 14px!important;
+}
+.fw-700 {
+    font-weight: 700;
+}
+.link-wrap
+{
+    margin-top: 50px;
+}
+.link-wrap2
+{
+    margin-top: 150px;
+}
+.info
+{
+    padding-top: 50px;
+    font-size: 18px;
+    text-align: center;
+    z-index: 1;
+}
+.bloc
+{
+    text-align: center;
+}
+.accordion-body
+{
+    background-color: rgb(86, 130, 141);
+    color:white;
+}
+
+.pourInfo
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer
+{
+    background-color: #4C8298;
+    height: 15%;
+    bottom: 0px;
+    width: 110%;
+    margin-left: -10px;
+    padding-left: 20px;
+}
+.btn-faq
+{
+    margin-top: 10px;
+    background-color: rgb(145, 207, 223)!important; 
+    border-color: #65bde0 !important;
+
+}
+.otherQ
+{
+    color:white;
+    font-size: 18px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+
+}
+
+@media (max-width: 800px)
+{
+    .imgtitle
+{
+ width: 50%;
+ margin-left: 25%;
+}
+.hamIcon
+{
+    height: 30px;
+
+}
+    .navbar
+    {
+        z-index: 1;
+    }
+    .fond-menu
+    {
+        background-color: rgb(86, 130, 141);
+
+    }
+    
+    .menu-link
+    {   
+        padding: .1rem 1rem;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: .2em;
+    }
+    .logoHome
+    {
+        height: 25px;
+        margin-top: 2px;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none!important;
+    }
+    .vh-20
+    {
+        height: 10vh!important;
+    }
+    .pt-50
+    {
+        padding-top: 25px;
+    }
+
+}

@@ -1,0 +1,41 @@
+{% extends 'base_fr.html.twig' %}
+
+{% block title %}BABDay 2022{% endblock %}
+
+{% block body %}
+    <body>
+     <div class="vh-80 bgImage" style="background-image:url({{ asset('/image/heli.png') }})">
+        <div class="noir-opa h-100">
+            <div class="container">
+                <!-- test -->
+                <div class="d-flex h-cal justify-content-center align-items-center">
+                    <div class="col-7 text-center pt-50">
+                        <h1 class="text-white">BABDAY 2022</h1>
+                        <p class="text-yellow pt-30 txt-head">06 Avril 2022</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="pourInfo text-center link-wrap2">
+        <a href="#info" class="text-white fw-700 fs-14"> en savoir plus<br></a>
+    </div>
+    <section id="info">
+        <div class="container info">
+            <p>Le 06 avril 2022, la base aérienne de Beauvechain organisera le Beauvechain Air Base Day 2022, ou simplement le BAB Day 22.</p>
+
+            <p>Le but de cet événement est de présenter de manière détaillée les nombreuses unités spécifiques de notre base et des avions de notre Force Aérienne belge, avec bien sûr l’accent sur les avions de notre base aérienne (les hélicoptères A109 et NH90 et les avions SF260 Marchetti).</p>
+
+            <p>En surplus, plusieurs entités civiles, qui ont un lien particulier avec la base, seront également représentées.</p>
+
+            <p>De 10h à 17h, le public aura l’occasion de visiter différents stands où nous montrerons nos capacités. De plus, il y aura une exposition statique de différents aéronefs et des démonstrations en vol auront lieu tout au long de la journée.</p>
+
+            <p>Notre public cible est, dans l'ordre : les jeunes qui s'intéressent à l'aviation et / ou à une carrière à la Défense, les personnes intéressées par le monde du vol et bien sûr la population avoisinante. Nous souhaitons renforcer le lien entre la Défense et la Nation. Une partie des recettes de cet événement ira aux bonnes œuvres soutenues par les unités de notre base aérienne..</p>
+
+        </div>
+        <img class="imgIndex pb-50" src={{ asset('image/logojaune.png') }} alt="" />
+    </section>
+    </body>
+    {%  include 'footer/footer_fr.html.twig' %}
+{% endblock %}

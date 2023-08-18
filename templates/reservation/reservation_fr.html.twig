@@ -1,0 +1,85 @@
+{% extends 'base_fr.html.twig' %}
+
+{% block title %}Hello ReservationController!{% endblock %}
+
+{% block body %}
+<body class="bgImage"style="background-image:url({{ asset('image/lines2.png') }});">
+    <div class="container">
+        <!-- multistep form -->
+        <form action="{{ path('newReservation') }}" method="post" id="msform" name="resaForm">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active">Données personnelles</li>
+                <li>Tickets</li>
+                <li>Validation</li>
+            </ul>
+            <!-- fieldsets -->
+            <fieldset>
+                <h2 class="fs-title">Données personnelles</h2>
+                <h3 class="fs-subtitle"></h3>
+                <div class="form-group">
+                    <label for="famillyName" class="text-black">votre adresse de courrier électronique</label>
+                    <input type="email" class="form-control" id="email" placeholder="exemple : john.doe@email.com" name="eMail" required="champs obligatoire">
+                </div>
+                <div class="form-group">
+                    <label for="famillyName" class="text-black">votre nom de famille</label>
+                    <input type="text" class="form-control" id="famillyName" placeholder="exemple : doe" name="lastname" required="champs obligatoire">
+                </div>
+                <div class="form-group">
+                    <label for="firstname" class="text-black">Votre prénom</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="exemple : John" name="firstname" required="champs obligatoire">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2" class="text-black">nombre de places</label>
+                    <select class="form-select" id="exampleFormControlSelect1" name="nombre">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </div>
+                <input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Tickets</h2>
+                <h3 class="fs-subtitle"></h3>
+
+                {% for i in 1..10 %}
+                <div id="{{ "place"~i }}" class="{{ "place"~i }} row">
+                    <h3 class="text-place">Place numéro {{ i }}</h3>
+                    <div class="form-group col-6">
+                        <label class="text-black" for="{{ "Name"~i }}"> nom de famille</label>
+                        <input type="text" class="form-control" id="famillyName" placeholder="exemple : DOE" name="{{ "lastname"~i }}" required="champs obligatoire">
+                    </div>
+                    <div class="form-group col-6">
+                        <label class="text-black" for="{{ "firstname"~i }}"> prénom</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="exemple : John {{ "firstname"~i }}" name="{{ "firstname"~i }}" required="champs obligatoire">
+                    </div>
+                </div>
+                {% endfor %}
+
+                <input type="button" name="previous" class="previous action-button" value="Previous" />
+                <input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Validation</h2>
+                <h3 class="fs-subtitle"></h3>
+                <p class="text-black">Veuillez payer un total de</p>
+                <p  class="text-black"><span id="test"></span>€</p>
+                <p class="text-black">sur le Compte BE32 0019 2527 5602 (BIC : GEBABEBB) pour valider votre réservation avec en commentaire votre adresse mail (sans le @) de réservation</p>
+                <p class="text-black">Vous recevrez un QR code la veille de l'évènement que vous devrez à présenter à l'entrée</p>
+                <p class="text-black">N'oubliez pas de cliquer sur "envoyer" afin de valider votre inscription.</p>
+                <input type="button" name="previous" class="previous action-button" value="Previous" />
+                <a href="#" onclick="resaForm.submit()" class="btn submit action-button"> envoyer</a>
+            </fieldset>
+        </form>
+
+    </div>
+</body>
+{% endblock %}

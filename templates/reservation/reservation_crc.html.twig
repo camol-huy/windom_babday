@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('image/efflux_garden.png') }}">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Hamburger party @ CRC{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/smartphone.css') }}">
+    {% endblock %}
+
+    {% block javascripts %}
+        <script src="{{ asset('js/jquery.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/jqueryEasing.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.bundle.js') }}"></script>
+        <script src="{{ asset('js/camol.js') }}"></script>
+    {% endblock %}
+</head>
+<!--
+            ,-----.
+        \\ ====='.
+         \\  ()   '.
+          \\   \\/ \\/'.
+           \\  || |   '._                             _,cmmmnc,_
+            \\___68FS___\\'-._=----+- _______________,.-=: ###C-- `c._
+)@@@@@@@   ,|=--------------`---'''`.   `  `.   `.   `,   `~''==='~`    `'-.___
+ @@@@@@@@ :|                * CRC Family day  *                           .-`
+@@@@@@@ ,dH] '       =(*)=         :       ---==;=--;  .   ;    +-- -_ .-`
+ @@@@@@ ):HH]_:______________  ____,.........__     _____,.----=-''~ `
+        ;:'''''----._.------\\`  :          .   `.'`'''''P
+        |:      .-'==-.__)___\\. :        .   .'`___L~___(
+        |:  _.'`       '|   / \\.:      .  .-`''`
+        `'''            `--'   \\:    ._.-'
+                               )_`============>-
+
+
+            Author :
+            CAMUS Olivier - olivier.camus@mil.be
+-->
+<!-- -->
+<div class="vh-20 head-nav">
+    <div class="text-center">
+        <!-- -->
+        <img alt="Air C2 Event Team" width="200px" src={{ asset('image/air_event_team.png') }}  />
+        <!-- -->
+    </div>
+</div>
+
+<body class="bgImage" style="background-image:url({{ asset('image/lines2.png') }});">
+
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-12 text-center pt-5">
+            <h1 class="pt-5">
+                hamburger party
+            </h1>
+        </div>
+        <div class="col-12 text-center">
+            <h2>
+                Thursday August 31 @ 12 p.m.
+            </h2>
+        </div>
+        <div class="col-12 text-center pt-3">
+            <h2 class="text-lowercase">
+                Homemade Hamburger with belgian fries - 8,00 €
+            </h2>
+        </div>
+        <br>
+        <!-- debut formulaire -->
+        <form action="{{ path('newCRC') }}" method="post" name="resaForm" class="row">
+            <div class="col-6 pt-3">
+                <h3 class="text-center">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+                </h3>
+            </div>
+            <div class="col-6 pt-3">
+                <h3 class="text-center">
+                    <label for="firstname">firstname:</label>
+
+                    <input type="text" id="firstname" name="firstname" required />
+                </h3>
+            </div>
+            <div class="col-12">
+                <h3 class="text-center">
+                    <fieldset class="row">
+                        <legend>Bread selection</legend>
+                        <div class="col-2 offset-3">
+                            <input type="radio" id="bbq" name="bbq" value="buns"  />
+                            <label for="huey">Buns</label>
+                        </div>
+                        <div class="col-2 offset-2">
+                            <input type="radio" id="bbq" name="bbq" value="pistolet" checked />
+                            <label for="huey">Pistolet</label>
+                        </div>
+                    </fieldset>
+                </h3>
+            </div>
+            <div class="col-12">
+                <h3 class="text-center">
+                    <fieldset class="row">
+                        <legend>cheese</legend>
+                        <div class="col-2 offset-3">
+                            <input type="radio" id="activity" name="activity" value="cheese = yes" />
+                            <label for="huey">yes</label>
+                        </div>
+                        <div class="col-2 offset-2">
+                            <input type="radio" id="activity" name="activity" value="cheese = no" checked/>
+                            <label for="huey">no</label>
+                        </div>
+                    </fieldset>
+                </h3>
+            </div>
+            <div class="col-12">
+                <h3 class="text-center">
+                    <fieldset class="row">
+                        <legend>double burger (+ 2,00 €)</legend>
+                        <div class="col-2 offset-3">
+                            <input type="radio" id="coffee" name="coffee" value="double = yes" />
+                            <label for="huey">yes</label>
+                        </div>
+                        <div class="col-2 offset-2">
+                            <input type="radio" id="coffee" name="coffee" value="double = no" checked/>
+                            <label for="huey">no</label>
+                        </div>
+                    </fieldset>
+                </h3>
+            </div>
+            <div class="text-center pt-4">
+                <a href="#" onclick="resaForm.submit()" class="btn btn-primary submit action-button"> envoyer</a>
+    {#            <a type="button" class="btn btn-primary col-4" href="{{ path('newCRC') }}" >register</a>#}
+            </div>
+        </form>
+        <!-- fin formulaire -->
+{#        <div class="col-12">#}
+{#            <h3 class="text-center">#}
+{#                for information, contact : <a href="mailto:+crc-airc2sp-event@mil.be">+CRC-airc2sp-event@mil.be</a>#}
+{#            </h3>#}
+{#        </div>#}
+    </div>
+</div>
+</body>

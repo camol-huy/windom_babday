@@ -1,0 +1,67 @@
+{% extends 'base_nl.html.twig' %}
+
+{% block title %}BABDay 2022 - FAQ{% endblock %}
+
+{% block body %}
+    <body class ="bgImage"style="background-image:url({{ asset('image/lines2.png') }});">
+      <div class="container pt-50 pb-50">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+
+          <!-- affichage des FAQ -->
+
+          {% for faq in faq_nl %}
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="{{ 'flush-heading'~faq.id }}">
+                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#{{ 'flush-collapse'~faq.id }}" aria-expanded="false" aria-controls="{{ 'flush-collapse'~faq.id }}">
+                  {{ faq.question }}
+                </button>
+              </h2>
+              <div id="{{ 'flush-collapse'~faq.id }}" class="accordion-collapse collapse " aria-labelledby="{{ 'flush-heading'~faq.id }}" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body  ">
+                  {{ faq.answer }}
+                </div>
+              </div>
+            </div>
+            {% if is_granted('ROLE_ADMIN') %}
+              <p>
+                <a href="{{ path('updateFaq', {id:faq.id}) }}" class="btn btn-outline-warning">Update</a>
+              </p>
+            {%  endif %}
+          {% endfor %}
+        </div>
+
+        <div class="faq-form pt-50">
+
+            <p class="otherQ fw-700">Staat je vraag er niet tussen? Stuur een email naar : <a href="mailto:info@babday.be">info@babday.be</a></p></p>
+            <!--
+            <form action="{{ path('contact') }}" method="post">
+                <div class="form-group">
+                    <label for="eMail">e-mail</label>
+                    <input type="email" class="form-control" id="eMail" aria-describedby="emailHelp" placeholder="voorbeeld: john.doe@email.com" name="eMail" required="verplichte velden">
+                </div>
+                <div class="form-group">
+                    <label for="question">jouw vraag</label>
+                    <textarea class="form-control" id="question" rows="3" placeholder="voorbeld : Hoe wordt het weer op 6 april?" name="question" required="verplichte velden"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="famillyName">jouw achternaam</label>
+                            <input type="text" class="form-control" id="famillyName" placeholder="voorbeld : doe" name="lastname" required="verplichte velden">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="firstname">jouw voornam</label>
+                            <input type="text" class="form-control" id="firstname" placeholder="voorbeld : John" name="firstname" required="verplichte velden">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn  btn-primary btn-faq">sturen</button>
+            </form>
+            -->
+      </div>
+  </div>
+    </body>
+    {%  include 'footer/footer_nl.html.twig' %}
+{% endblock body %}

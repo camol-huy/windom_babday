@@ -1,0 +1,87 @@
+{% extends 'base_nl.html.twig' %}
+
+{% block title %}BABDay 2022 - praktische regelingen{% endblock %}
+
+{% block body %}
+<body class ="bgImage"style="background-image:url({{ asset('image/lines2.png') }})">
+
+<div class="info pb-50 bgImage" >
+
+    <div class="bloc">
+        <p>Beauvechain Air Base Day</p>
+        <p>06 April 2022</p>
+        <p>10u00 – 17u00 </p>
+        <p>Inkom aan de kassa: 10 euro/persoon 12 jaar en meer</p>
+        <p>Voorverkoop: €8</p>
+        <p>Toegang gratis voor kinderen 11 jaar en minder.</p>
+        <P>Toegang gratis voor militairen in uniform, op vertoon van de Mil ID kaart.</p>
+    </div>
+    <div class="bloc">
+        <div class="separation"></div>
+        <p>Voor het verzekeren van uw veiligheid:
+            Zullen er bij de ingang fouilles uitgevoerd worden van voertuigen, bagage en personen.</p>
+        <p>Gelieve daarom te controleren bagage (zakken/rugzakken) te beperken en volgende items NIET mee te brengen:</p>
+        <p>DRANK, WAPENS, DRONES, MILITAIRE TENUE (voor niet-militairen)
+        </p>
+    </div>
+    <div class="bloc">
+        <div class="separation"></div>
+        <p>COVID-maatregelen zullen van toepassing zijn</p>
+        <p>
+            Het dragen van het mondmasker is niet verplicht tijdens het evenement op de basis. <br>
+            Indien u echter gebruik wenst te maken van de shuttle bus die rijdt van de parking naar de publieke zone (en omgekeerd), is het mondmasker wel VERPLICHT.
+
+        </p>
+    </div>
+    <!-- start of "Adres van de dag" -->
+    <div class="bloc mt-3">
+        <div class="separation"></div>
+        <p> adres van de dag</p>
+        <div class="row">
+            <p class="col-4 offset-2">
+                P1 <br> Rue de la Grande Lecke 5, 1320 Beauvechain
+            </p>
+            <p class="col-4">
+                P6 <br>Rue Longue, 1320 Beauvechain
+            </p>
+        </div>
+    </div>
+    <!-- end of "Adres van de dag" -->
+    <!-- map web -->
+    <div class="map-web">
+        <div class="bloc">
+            <div class="separation"></div>
+            <p> hoe bereik je ons</p>
+            <div class="row">
+                <div class="col-4 offset-1 " style="padding-left: 5.8rem">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5047.378911120422!2d4.780088556705535!3d50.7627916614634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c16551eb3a0e9f%3A0x45fd95293e8cc321!2sBEAUVECHAIN%20A%C3%A9rodrome%20P1!5e0!3m2!1sfr!2see!4v1648470131877!5m2!1sfr!2see" width="550" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-4 offset-1">
+                    <img src="{{ asset('image/plan_2.png') }}" alt="" width="auto" height="400px">
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- map mobile -->
+    <div class="map-mobile">
+        <div class="bloc">
+            <div class="separation"></div>
+            <p> hoe bereik je ons</p>
+            <div>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5047.378911120422!2d4.780088556705535!3d50.7627916614634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c16551eb3a0e9f%3A0x45fd95293e8cc321!2sBEAUVECHAIN%20A%C3%A9rodrome%20P1!5e0!3m2!1sfr!2see!4v1648470131877!5m2!1sfr!2see" width="300px" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div>
+                    <img src="{{ asset('image/plan_2.png') }}" style="border:0" width="300px" height="auto">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+    {%  include 'footer/footer_nl.html.twig' %}
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration of babday website{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="text-center"><h2>Administration of babday website</h2></div>
+        <div class="row">
+            <div class="col-3">
+                {% if is_granted('ROLE_SUPERADMIN') %}
+                    <a class="btn btn-success" href="{{ path('registration') }}">add new administrator</a>
+                {% endif %}
+                {% if not is_granted('ROLE_SUPERADMIN') %}
+                    <a class="btn btn-success disabled" href="#">add new administrator</a>
+                {% endif %}
+            </div>
+            <div class="col-3">
+                <a class="btn btn-success" href="{{ path('newActivity') }}">add new activity</a>
+            </div>
+            <div class="col-3">
+                <a class="btn btn-success" href="{{ path('newFAQ') }}">add new FAQ</a>
+            </div>
+            <div class="col-3">
+                <a class="btn btn-success" href="{{ path('newProgram') }}"> add new Program</a>
+            </div>
+            <div class="col-3">
+                <a class="btn btn-success " href="{{ path('allResa') }}">check reservation</a>
+            </div>
+            <div class="col-3">
+                <a class="btn btn-success" href="{{ path('allActivitiesUpdate') }}">update activity</a>
+            </div>
+            <div class="col-3">
+                <a class="btn btn-success" href="{{ path('allFaqUpdate') }}"> update FAQ</a>
+            </div>
+            <div class="col-3">
+                <a class="btn btn-success" href="{{ path('allProgramUpdate') }}"> update Program</a>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

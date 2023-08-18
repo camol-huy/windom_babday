@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('image/efflux_garden.png') }}">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    {% endblock %}
+
+    {% block javascripts %}
+        <script src="{{ asset('js/jquery.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/jqueryEasing.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.bundle.js') }}"></script>
+        <script src="{{ asset('js/camol.js') }}"></script>
+    {% endblock %}
+</head>
+<!--
+            ,-----.
+        \\ ====='.
+         \\  ()   '.
+          \\   \\/ \\/'.
+           \\  || |   '._                             _,cmmmnc,_
+            \\___68FS___\\'-._=----+- _______________,.-=: ###C-- `c._
+)@@@@@@@   ,|=--------------`---'''`.   `  `.   `.   `,   `~''==='~`    `'-.___
+ @@@@@@@@ :|                * CRC Family day  *                           .-`
+@@@@@@@ ,dH] '       =(*)=         :       ---==;=--;  .   ;    +-- -_ .-`
+ @@@@@@ ):HH]_:______________  ____,.........__     _____,.----=-''~ `
+        ;:'''''----._.------\\`  :          .   `.'`'''''P
+        |:      .-'==-.__)___\\. :        .   .'`___L~___(
+        |:  _.'`       '|   / \\.:      .  .-`''`
+        `'''            `--'   \\:    ._.-'
+                               )_`============>-
+
+
+            Author :
+            CAMUS Olivier - olivier.camus@mil.be
+-->
+<div class="vh-20 head-nav">
+    <div><img alt="crc family day -- Reservation" class="imgtitle" src={{ asset('image/CRC.png') }} /></div>
+</div>
+<body class="bgImage"style="background-image:url({{ asset('image/lines2.png') }});">
+<div class="container">
+    <br><br><br><br>
+    <div class="container">
+        <div class="text-center text-white"><h2>List of all reservation</h2></div>
+        <div class="text-center text-white"><h3>They are {{ nb }} inscriptions </h3></div>
+
+        <table class="table text-white">
+            <thead>
+            <tr>
+                <th class="text-center">email</th>
+                <th class="text-center">name</th>
+                <th class="text-center">RRN</th>
+                <th class="text-center" style="white-space: nowrap">vehicule</th>
+                <th class="text-center" style="white-space: nowrap">BBQ</th>
+                <th class="text-center" style="white-space: nowrap">tarte</th>
+                <th class="text-center" style="white-space: nowrap">duo</th>
+                <th class="text-center" style="white-space: nowrap">visite</th>
+            </tr>
+            </thead>
+            <tbody class="text-white">
+            {% for resa in resas%}
+                <tr id="temp">
+                    <td class="text-center align-middle">{{ resa.mail }} </td>
+                    <td class="text-center align-middle">{{ resa.name }}</td>
+                    <td class="text-center align-middle">{{ resa.rrn }}</td>
+                    <td class="text-center align-middle">{{ resa.car }}</td>
+
+                    {% if resa.bbq == '5' %}
+                        <td class="text-center align-middle">Hamburger</td>
+                    {% elseif resa.bbq == '13' %}
+                        <td class="text-center align-middle">repas végétarien</td>
+                    {% elseif resa.bbq == '15' %}
+                        <td class="text-center align-middle">repas 3 viandes</td>
+                    {% elseif resa.bbq == '30' %}
+                        <td class="text-center align-middle">repas 5 viandes</td>
+                    {% else %}
+                        <td class="text-center align-middle">pas de repas</td>
+                    {% endif %}
+                    {% if resa.coffee == true %}
+                        <td class="text-center align-middle" style="color: #00dd00">OUI</td>
+                    {% else %}
+                        <td class="text-center align-middle" style="color:red">NON</td>
+                    {% endif %}
+                    {% if resa.activity == true %}
+                        <td class="text-center align-middle" style="color: #00dd00">OUI</td>
+                    {% else %}
+                        <td class="text-center align-middle" style="color:red">NON</td>
+                    {% endif %}
+                    {% if resa.visite == true %}
+                        <td class="text-center align-middle" style="color: #00dd00">OUI</td>
+                    {% else %}
+                        <td class="text-center align-middle" style="color:red">NON</td>
+                    {% endif %}
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+
+</div>
+</body>

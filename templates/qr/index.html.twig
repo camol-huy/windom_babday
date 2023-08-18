@@ -1,0 +1,12 @@
+{% extends 'camol.html.twig' %}
+{% block body %}
+        <h3>Hello {{ resa.firstname }} {{ resa.name }},</h3>
+
+        <p>You will find your QRCode to access at babday.</p>
+
+            status : {% if resa.payer == 0 %} <span style="color: red">encore a payer</span> {% else %} <span style="color: green">payé</span> {% endif %}
+
+        <p>Have a nice day</p>
+
+        <p>l'équipe BAB Day</p>
+{% endblock %}

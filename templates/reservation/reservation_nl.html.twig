@@ -1,0 +1,85 @@
+{% extends 'base_nl.html.twig' %}
+
+{% block title %}Hello ReservationController!{% endblock %}
+
+{% block body %}
+<body class ="bgImage"style="background-image:url({{ asset('image/lines2.png') }});">
+    <div class="container">
+        <!-- multistep form -->
+        <form action="{{ path('newReservation') }}" method="post" id="msform" name="resaForm">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active">persoonlijke gegevens</li>
+                <li>Kaartjes</li>
+                <li>geldigmaking</li>
+            </ul>
+            <!-- fieldsets -->
+            <fieldset>
+                <h2 class="fs-title">persoonlijke gegevens</h2>
+                <h3 class="fs-subtitle"></h3>
+                <div class="form-group">
+                    <label for="email" class="text-black">jouw e-mailadres</label>
+                    <input type="email" class="form-control" id="email" placeholder="exemple : john.doe@email.com" name="eMail" required="champs obligatoire">
+                </div>
+                <div class="form-group">
+                    <label for="famillyName" class="text-black">je achternaam</label>
+                    <input type="text" class="form-control" id="famillyName" placeholder="exemple : doe" name="lastname" required="champs obligatoire">
+                </div>
+                <div class="form-group">
+                    <label for="firstname" class="text-black">Jouw voornaam</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="exemple : John" name="firstname" required="champs obligatoire">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2" class="text-black">aantal kaartjes</label>
+                    <select class="form-select" id="exampleFormControlSelect1" name="nombre">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </div>
+                <input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">Kaartjes</h2>
+                <h3 class="fs-subtitle"></h3>
+
+                {% for i in 1..10 %}
+                <div id="{{ "place"~i }}" class="{{ "place"~i }} row">
+                    <h3 class="text-place">Kaartjes nummer {{ i }}</h3>
+                    <div class="form-group col-6">
+                        <label class="text-black" for="{{ "lastname"~i }}"> achternaam</label>
+                        <input type="text" class="form-control" id="famillyName" placeholder="exemple : DOE" name="{{ "lastname"~i }}" required="champs obligatoire">
+                    </div>
+                    <div class="form-group col-6">
+                        <label class="text-black" for="{{ "firstname"~i }}"> voornam</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="exemple : John {{ "firstname"~i }}" name="{{ "firstname"~i }}" required="champs obligatoire">
+                    </div>
+                </div>
+                {% endfor %}
+
+                <input type="button" name="previous" class="previous action-button" value="Previous" />
+                <input type="button" name="next" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset>
+                <h2 class="fs-title">geldigmaking</h2>
+                <h3 class="fs-subtitle"></h3>
+                <p class="text-black">Betaal a.u.b. in totaal</p>
+                <p  class="text-black"><span id="test"></span>€</p>
+                <p class="text-black">op de rekening BE32 0019 2527 5602 (BIC : GEBABEBB) om uw reservering te valideren met uw boeking e-mailadres (zonder de @) in commentaar</p>
+                <p class="text-black">Je ontvangt de dag voor het evenement een QR-code die je bij de ingang moet laten zien</p>
+                <p class="text-black">Vergeet niet op "sturen" te klikken om uw registratie te valideren.</p>
+                <input type="button" name="previous" class="previous action-button" value="Previous" />
+                <a href="#" onclick="resaForm.submit()" class="btn submit action-button"> sturen</a>
+            </fieldset>
+        </form>
+
+    </div>
+</body>
+{% endblock %}

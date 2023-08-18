@@ -1,0 +1,28 @@
+{% extends 'camol.html.twig' %}
+
+{% block title %} read {% endblock %}
+
+{% block body %}
+
+    <main class="container">
+        <section class="row">
+            <div class="col-md-12 text-center mt-5">
+                <h1><u>name</u> : {{ resa.name }}</h1>
+            </div>
+            <div class="col-md-12 text-center mt-5">
+                <h1><u>firstname</u> : {{ resa.firstname }}</h1>
+            </div>
+            <div class="col-md-12 text-center mt-5">
+                <h1>{{ resa.email }}</h1>
+            </div>
+            <div class="col-md-12 txt_cent mt-5">
+                <h1>Status : {% if resa.payer == 1 %} <span style="color: green"> OK </span>  {% else %} <span style="color: red">N-OK</span>{% endif %}</h1>
+            </div>
+            <div class="col-md-12 text-center mt-5">
+                <div><img src="{{ qr_code_path(reponse) }}" /></div>
+            </div>
+        </section>
+    </main>
+
+
+{% endblock %}

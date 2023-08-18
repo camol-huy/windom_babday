@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} read {% endblock %}
+
+{% block body %}
+
+    <main class="container">
+        <section class="row">
+            <div class="col-md-12 txt_cent mt-5">
+                <h1>{{ resa.id }}</h1>
+            </div>
+            <div class="col-md-12 txt_cent mt-5">
+                <h1>{{ resa.name }}</h1>
+            </div>
+            <div class="col-md-12 txt_cent mt-5">
+                <h1>{{ resa.firstname }}</h1>
+            </div>
+            <div class="col-md-12 txt_cent mt-5">
+                <h1>{{ resa.email }}</h1>
+            </div>
+            <div class="col-md-12 txt_cent mt-5">
+                <h1>{% if resa.payer == 1 %} <span style="color: green"> access granted </span> {% else %} <span style="color: red"> N-OK </span> {% endif %}</h1>
+            </div>
+            <div class="col-md-12 txt_cent mt-5">
+                <h1>{% if resa.imageName == 0 %} <a href="{{ path('scan',{id:resa.id}) }}" class="btn btn-danger">scanner </a> {% else %} <b style="color: red"> already scanned </b> {% endif %}</h1>
+            </div>
+
+        </section>
+    </main>
+
+
+{% endblock %}

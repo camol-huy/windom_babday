@@ -1,0 +1,117 @@
+{% extends 'base_fr.html.twig' %}
+
+{% block title %}BABDay 2022 - Activité {% endblock %}
+
+{% block body %}
+    <body class ="bgImage"style="background-image:url({{ asset('image/lines2.png') }});">
+        <section id="info">
+            <div class="container info">
+                <p>
+                    Plusieurs aéronefs militaires ont confirmé leur participation à la fois pour la partie statique que pour la partie dynamique.
+                    Le public pourra jouir des hélicoptères et des avions de notre base, tels que les A109BAi, NH90 TTH et SF260.
+                    Durant le BAB Day nous tirons au sort quelques baptêmes de l'air en hélicoptères A109 et NH90. Plus d’information suit encore.
+                </p>
+                <div style="margin-top: -50px">
+                    <video width="640" height="480" controls autoplay>
+                        <source src="{{ asset('video/BAB.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p>
+                    De plus, les unités de la base se présenteront à travers différents kiosques d’information.
+                    Venez découvrir les missions et le matériel de nos unités "Force Protection" chargées de la surveillance, de la protection et de la défense de nos bases, de notre personnel et de nos moyens en Belgique et à l’étranger. Elles seront présentes avec un “Force Protection Village” ou vous pourrez également assister à des démonstrations de différents types d’interventions.
+                </p>
+                <p>
+                    Lors de notre événement, certaines associations civiles en contact étroit avec notre base aérienne, comme les Cadets de l’air, ne manqueront pas à l’appel !
+                    Elles seront présentes avec un stand et éventuellement quelques avions pour présenter leur association au public.
+                </p>
+                <p>
+                    <b>
+                        Surveillez régulièrement cette page, d’autres informations suivront !
+                    </b>
+                </p>
+                <!-- start of "baptème de l'air" -->
+                <div>
+                    <h4><u>baptêmes de l'air</u></h4>
+                    <p>
+                    Durant le BAB Day nous tirons au sort quelques baptêmes de l'air en hélicoptères A109 et NH90, ainsi que sur l’avion A400M (ce vol est prévu le 10 Sep 22 au départ de Kleine Brogel Airbase).
+                    Vous êtes intéressé par un baptême de l’air en hélicoptère militaire ou en avion A400M et vous avez au moins 12 ans ? Alors présentez-vous à l’ « Air Rides Tent » afin de participer au tirage au sort de la tombola « baptêmes de l'air ».
+                    </p>
+                    <p>
+                        Comment participer ?
+                    </p>
+                    <p>
+                        A la caisse, vous recevrez un ticket d’entrée composé de deux parties. Chaque partie dispose d’un même numéro.
+                        <br>Dirigez-vous vers la tente « Air Rides Tent », mettez la plus grande partie de votre ticket dans la boîte de tombola. Gardez bien la petite partie du ticket avec vous, vous en aurez besoin pour vérifier si vous avez gagné.
+                        <br>Les gagnants seront annoncés par haut-parleurs. Les numéros gagnants seront aussi projetés sur les écrans dans la zone publique.
+                        <br>Vous avez gagné? Dirigez-vous au plus vite vers la tente “Air Rides”. Après avoir montré votre ticket, nous vous inscrirons sur la liste des passagers et vous donnerons toutes les instructions nécessaires pour le vol.
+                        <br>Good luck… and good flight !
+                    </p>
+                    <ul>
+                        <li><u>Tirage:</u></li>
+                        <li>11h30</li>
+                        <li>13h30</li>
+                        <li>15h30 (Seulement A400)</li>
+                    </ul>
+                    <ul>
+                        <li><u>Rotations:</u></li>
+                        <li>13h05-13h30: NH90 & A109</li>
+                        <li>15h10-15h35: NH90 & A109</li>
+                    </ul>
+                </div>
+                <!-- end of "baptème de l'air" -->
+
+                <!-- start of Avions et hélicoptères militaires -->
+                <div>
+                    <h4><u>Avions et hélicoptères militaires</u></h4>
+                    <p>
+                        Plusieurs aéronefs militaires ont confirmé leur participation à la fois pour la partie statique que pour la partie dynamique.
+                        <br>Le public pourra jouir des hélicoptères et des avions de notre base, tels que les A109BAi, NH90 TTH et SF260.
+                        <br>Des appareils d'autres unités seront également présents, parmi eux un F16, un A400M, un Falcon 7X un NH90 NFH.
+                    </p>
+                </div>
+                <!-- end of Avions et hélicoptères militaires -->
+
+                <!-- start of Associations civiles -->
+                <div>
+                    <h4><u>Associations civiles</u></h4>
+                    <p>
+                        Lors de notre événement, certaines associations civiles en contact étroit avec notre base aérienne, ne manqueront pas à l’appel. Dans ce cadre, des associations d’aviation locale se sont engagées, telles que les Cadets de l’Air et Avia Airsports. En outre, les aéroclubs de Goetsenhoven seront également présents.
+                        <br> Le Koninklijke Vliegclub De Wouw et ULM Goetsenhoven vzw en font partie.
+                    </p>
+                    <p>
+                        Une partie sera également consacrée à l'aéromodélisme.
+                        <br> A cet effet, les clubs actifs dans la région de Beauvechain pourront vous fournir des explications auprès de nombreux modèles en exposition de type hélicoptère, jet et planeurs.
+                        <br> Un certain nombre de beaux projets ‘Warbird’ seront également présentés.
+                    </p>
+                </div>
+                <!-- end of Associations civiles -->
+
+                <!-- start of Force Protection Village -->
+                <div>
+                    <h4><u>Force Protection Village</u></h4>
+                    <p>
+                        Venez découvrir les missions et le matériel de nos unités « Force Protection » chargées de la surveillance, de la protection et de la défense de nos bases, de notre personnel et de nos moyens en Belgique et à l’étranger. Vous pourrez également assister à des démonstrations de différents types d’interventions.
+                        <br> Pour les plus jeunes, nous vous proposons de participer à notre « Air Commando Junior Challenge » pour obtenir votre brevet de Commando de l’Air.
+                    </p>
+                </div>
+                <!-- end of Force Protection Village -->
+
+                <!-- start of kids challenge -->
+                <div>
+                    <h4><u>Kids Challenge</u></h4>
+                    <p>
+                        Le Kids Challenge est un parcours d’activités s’étalant sur différents stands du Beauvechain Air Base Day.
+                        <br>Le parcours commence au stand Kids Challenge où les participants reçoivent un formulaire d’inscription.
+                        <br>Si les activités sont exécutées avec succès, le participant reçoit un diplôme ainsi qu’un souvenir unique du BAB Day 2022.
+                        <br>( ! Jusqu’à épuisement de stocks !)
+                        <br>
+                        Ouvert à tous les âges < 18 ans, âge de référence : 6 à 12 ans.
+                    </p>
+                </div>
+                <!-- end of kids challenge -->
+            </div>
+        </section>
+    </body>
+    {%  include 'footer/footer_fr.html.twig' %}
+{% endblock body %}

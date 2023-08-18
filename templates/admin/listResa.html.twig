@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration of babday website{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="text-center text-white"><h2>List of all reservation</h2></div>
+        <div class="text-center text-white"><h3>They are {{ nb }} inscriptions </h3></div>
+
+        <table class="table text-white">
+            <thead>
+            <tr>
+                <th class="text-center">id</th>
+                <th class="text-center">email</th>
+                <th class="text-center">Lastname</th>
+                <th class="text-center">firstname</th>
+                <th class="text-center" style="white-space: nowrap">payé ?</th>
+                <th class="text-center" style="white-space: nowrap">QR Code</th>
+                {% if is_granted('ROLE_SUPERADMIN') %}
+                <th class="text-center" style="white-space: nowrap">Envoyer</th>
+                {% endif %}
+            </tr>
+            </thead>
+            <tbody class="text-white">
+            {% for resa in resas%}
+                <tr id="temp">
+                    <td class="text-center align-middle">{{ resa.id }}</td>
+                    <td class="text-center align-middle">{{ resa.email }} </td>
+                    <td class="text-center align-middle">{{ resa.name }}</td>
+                    <td class="text-center align-middle">{{ resa.firstname }}</td>
+                    <td class="text-center align-middle" >{% if resa.payer == 1 %} yes {% else %} no <a href="{{ path('payer',{id:resa.id}) }}" class="btn btn-outline-warning"> payer</a>{% endif %} </td>
+                    <td class="text-center align-middle"><a href="{{ path('qrcode',{id:resa.id}) }}" class="btn btn-outline-success">generate</a></td>
+                    {% if is_granted('ROLE_SUPERADMIN') %}
+                        <td class="text-center align-middle"><a href="{{ path('mailQR',{id:resa.id}) }}" class="btn btn-outline-warning">envoyer</a></td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+
+{% endblock %}

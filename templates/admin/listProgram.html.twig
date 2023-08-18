@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration of babday website{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="text-center text-white"><h2>Program</h2></div>
+        <table class="table text-white">
+            <thead>
+            <tr>
+                <th class="text-center">DTG_Start</th>
+                <th class="text-center">DTG_End</th>
+                <th class="text-center">Description</th>
+                <th class="text-center" style="white-space: nowrap">Air ?</th>
+                <th class="text-center" style="white-space: nowrap">French ?</th>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <th class="text-center">delete</th>
+                    <th class="text-center">edit</th>
+                {% endif %}
+            </tr>
+            </thead>
+            <tbody class="text-white">
+            {% for program in programs %}
+                <tr id="temp">
+                    <td>{{ program.dtgStart }} </td>
+                    <td>{{ program.dtgEnd }}</td>
+                    <td>{{ program.description }}</td>
+                    <td class="text-center" >{% if program.air == 1 %} yes {% else %} no {% endif %} </td>
+                    <td class="text-center" >{% if program.fr == 1 %} yes {% else %} no {% endif %} </td>
+                    {% if is_granted('ROLE_USER') %}
+                        <td class="text-center icofont-2x"><a style="color: red; text-decoration: none" href="{{ path('deleteProgram',{id:program.id}) }}"><i class="icofont-ui-delete"></i></a></td>
+                        <td class="text-center icofont-2x"><a style="color: green; text-decoration: none" href="{{ path('updateProgram',{id:program.id}) }}"><i class="icofont-edit-alt"></i></a></td>
+                    {%  endif %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+
+{% endblock %}

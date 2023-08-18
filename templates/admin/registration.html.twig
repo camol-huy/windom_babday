@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}nouvel utilisateur{% endblock %}
+
+{% block body %}
+    <main class="container">
+        <section class="row">
+            <div class="col-md-12 text-center m-3">
+                <h3>inscription nouvel utilisateur</h3>
+            </div>
+            <div class="col-md-2 offset-5 text-center">
+                {{ form_start(form) }}
+                {{ form_widget(form) }} <!-- va chercher tout les champs -->
+                <button type="submit" class="btn btn-primary m-3">Inscription</button>
+                {{  form_end(form) }}
+            </div>
+
+        </section>
+    </main>
+
+{% endblock %}
