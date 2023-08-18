@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<title>Beauvechain Air Base Day</title>
+
+{% block body %}
+    <link rel="icon" type="image/png" class="" href="{{ asset('image/BAF.jpg') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <body class ="bgImage"style="background-image:url({{ asset('image/lines2.png') }});">
+    <main class="container">
+        <div class="row d-flex align-content-center">
+            <div class="col d-flex justify-content-center">
+                <div class="vh-100 pt-lang">
+                    <img src={{ asset('image/server_maintenance.png') }} alt="server_maintenance" width="1000vh">
+                    <h2 class="text-center text-white">Sorry, we're working asap</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+    </body>
+{% endblock %}
